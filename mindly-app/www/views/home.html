@@ -2,7 +2,7 @@
 <div ng-show="!tasks" class="full-page-msg">Agregar un nuevo proyecto <i class="icon ion-plus-circled"></i>
 </div>
 <div ng-show="tasks">
-  <div class="list"><a ng-repeat="task in tasks" href="#/menu/{{ task.task_id }}" class="item item-avatar item-icon-right"><img src="../img/photo.jpg"/>
+  <div class="list"><a ng-repeat="task in tasks" href="#/menu/header/{{ task.task_id }}" class="item item-avatar item-icon-right"><img src="../img/ionic.png"/>
       <h2>{{ task.name }}</h2>
       <p>{{ task.description }}</p>
       <h5>{{ task.project }} </h5>

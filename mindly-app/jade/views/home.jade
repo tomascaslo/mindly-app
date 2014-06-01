@@ -3,8 +3,8 @@ div(ng-show="!tasks", class="full-page-msg") Agregar un nuevo proyecto
 	i(class="icon ion-plus-circled")
 div(ng-show="tasks") 
 	div(class="list")
-		a(ng-repeat="task in tasks", class="item item-avatar item-icon-right", href="#/menu/{{ task.task_id }}")
-			img(src="../img/photo.jpg")
+		a(ng-repeat="task in tasks", class="item item-avatar item-icon-right", href="#/menu/header/{{ task.task_id }}")
+			img(src="../img/ionic.png")
 			h2 {{ task.name }}
 			p {{ task.description }}
 			h5 {{ task.project }} 

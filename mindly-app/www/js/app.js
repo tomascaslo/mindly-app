@@ -46,17 +46,27 @@ angular.module('mindlyApp', [
  		controller: "MenuCtrl",
  	})
 
- 	.state('menu.home', {
- 		url: "/home",
+ 	.state('menu.header', {
+ 		url: "/header",
+    views: {
+      'header' : {
+        templateUrl: "views/general/header.html",
+        controller: "HeaderCtrl",
+      },
+    }, 
+ 	})
+
+  .state('menu.header.home', {
+    url: "/home",
     views: {
       'content': {
         templateUrl: "views/home.html",
         controller: "HomeCtrl",
       },
     }, 
- 	})
+  })  
 
-.state('menu.task-detail', {
+  .state('menu.header.task-detail', {
     url: "/:task",
     views: {
       'content': {
@@ -67,6 +77,6 @@ angular.module('mindlyApp', [
   })
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/menu/home');
+  $urlRouterProvider.otherwise('/menu/header/home');
 
 }]);

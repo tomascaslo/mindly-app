@@ -3,12 +3,18 @@
   <head>
     <meta name="viewport" content="initial-scale=1, maximun-scale=1, user-scalable=no, width=device-width">
     <link href="../lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
   </head>
-  <body>
-    <div ng-app="mindly">
-      <ion-nav-view></ion-nav-view>
-    </div>
+  <body ng-app="mindlyApp">
+    <ion-nav-view></ion-nav-view>
     <script src="../lib/ionic/js/ionic.bundle.js"></script>
+    <script src="../lib/underscore/underscore.js"></script>
     <script src="../js/app.js"></script>
+    <script src="../js/services/home-service.js"></script>
+    <script src="../js/services/tasks/tasks-service.js"></script>
+    <script src="../js/services/general/underscore-service.js"></script>
+    <script src="../js/controllers/general/menu-controller.js"></script>
+    <script src="../js/controllers/home-controller.js"></script>
+    <script src="../js/controllers/tasks/task-detail-controller.js"></script>
   </body>
 </html>

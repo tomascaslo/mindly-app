@@ -1,0 +1,17 @@
+ion-side-menus
+	ion-pane(ion-side-menu-content)
+		ion-nav-bar(class="bar-stable new-title-slide-ios7")
+			ion-nav-back-button(class="button-clear")
+				i(class="icon ion-ios7-arrow-back") Back
+		ion-nav-view(name="content", animation="slide-left-right")
+
+	ion-side-menu(side="left")
+		header(class="bar bar-header bar-stable")
+			h1(class="title") Mindly
+		ion-content(class="has-header")
+			ion-list()
+				ion-item(nav-clear, menu-close, href="#/menu/home") Home
+				ion-item(nav-clear, menu-close, href="#") Projects
+				ion-item(nav-clear, menu-close, href="#") Partners
+				ion-item(nav-clear, menu-close, href="#") Profile
+				ion-item(nav-clear, menu-close, href="#") Settings

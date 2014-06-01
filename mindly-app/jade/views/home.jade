@@ -1,16 +1,13 @@
-ion-side-menus
-	ion-pane ion-side-menu-content
-		ion-nav-bar(class="bar-stable new-title-slide-ios7")
-			ion-nav-back-button(class="button-clear")
-				i(class="icon ion-ios7-arrow-back") Back
+div(ng-show="!tasks", class="full-page-msg") Agregar un nuevo proyecto 
+	//- a(href='/api/mindly/project/step1/')
+	i(class="icon ion-plus-circled")
+div(ng-show="tasks") 
+	div(class="list")
+		a(ng-repeat="task in tasks", class="item item-avatar item-icon-right", href="#/menu/{{ task.task_id }}")
+			img(src="../img/photo.jpg")
+			h2 {{ task.name }}
+			p {{ task.description }}
+			h5 {{ task.project }} 
+			h5 Pr. {{ task.priority }} 
+			i(class="icon ion-chevron-right icon-accessory")
 
-	ion-side-menu(side="left")
-		header(class="bar bar-header bar-stable")
-			h1(class="title") Left
-		ion-content(class="has-header")
-			ion-list()
-				ion-item(nav-clear, menu-close, href="#/menu/home") Home
-				ion-item(nav-clear, menu-close, href="#") Projects
-				ion-item(nav-clear, menu-close, href="#") Partners
-				ion-item(nav-clear, menu-close, href="#") Profile
-				ion-item(nav-clear, menu-close, href="#") Settings

@@ -6,8 +6,9 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('mindly', [
+angular.module('mindlyApp', [
     'ionic',
+    'underscore',
     ])
 
 .run(['$rootScope', '$ionicPlatform', function($rootScope, $ionicPlatform) {
@@ -24,7 +25,7 @@ angular.module('mindly', [
   });
 }])
 
-.config(['$httpProvider', '$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+.config(['$httpProvider', '$stateProvider', '$urlRouterProvider', function($httpProvider, $stateProvider, $urlRouterProvider) {
 
     $httpProvider.defaults.xsrfCookieName = 'csrftoken';
     $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
@@ -41,66 +42,31 @@ angular.module('mindly', [
  	.state('menu', {
  		url: "/menu",
  		abstract: true,
- 		templateUrl: "views/menu.html",
- 		controller: 'MenuCtrl',
+ 		templateUrl: "views/general/menu.html",
+ 		controller: "MenuCtrl",
  	})
 
- 	.state('home', {
- 		url: "/menu/home",
- 		templateUrl: "views/home.html",
- 		controller: 'HomeCtrl', 
+ 	.state('menu.home', {
+ 		url: "/home",
+    views: {
+      'content': {
+        templateUrl: "views/home.html",
+        controller: "HomeCtrl",
+      },
+    }, 
  	})
 
-    // setup an abstract state for the tabs directive
-    .state('tab', {
-      url: "/tab",
-      abstract: true,
-      templateUrl: "templates/tabs.html"
-    })
-
-    // Each tab has its own nav history stack:
-
-    .state('tab.dash', {
-      url: '/dash',
-      views: {
-        'tab-dash': {
-          templateUrl: 'templates/tab-dash.html',
-          controller: 'DashCtrl'
-        }
-      }
-    })
-
-    .state('tab.friends', {
-      url: '/friends',
-      views: {
-        'tab-friends': {
-          templateUrl: 'templates/tab-friends.html',
-          controller: 'FriendsCtrl'
-        }
-      }
-    })
-    .state('tab.friend-detail', {
-      url: '/friend/:friendId',
-      views: {
-        'tab-friends': {
-          templateUrl: 'templates/friend-detail.html',
-          controller: 'FriendDetailCtrl'
-        }
-      }
-    })
-
-    .state('tab.account', {
-      url: '/account',
-      views: {
-        'tab-account': {
-          templateUrl: 'templates/tab-account.html',
-          controller: 'AccountCtrl'
-        }
-      }
-    })
+.state('menu.task-detail', {
+    url: "/:task",
+    views: {
+      'content': {
+        templateUrl: "views/tasks/task-detail.html",
+        controller: "TaskDetailCtrl",
+      },
+    }, 
+  })
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/menu/home');
 
 }]);
-

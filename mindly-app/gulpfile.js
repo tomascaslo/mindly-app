@@ -8,11 +8,15 @@ var rename = require('gulp-rename');
 var sh = require('shelljs');
 var jade = require('gulp-jade');
 var connect = require('gulp-connect');
+var less = require('gulp-less');
+var path = require('path');
 
 var paths = {
 	sass: ['./scss/**/*.scss'],
 	jade: './jade/**/*.jade',
+	less: './less/**/*.less',
 	views: './www/',
+	styles: './www/css/',
 };
 
 gulp.task('default', ['sass', 'jade']);
@@ -23,6 +27,15 @@ gulp.task('jade', function() {
 			pretty: true,
 		}))
 		.pipe(gulp.dest(paths.views))
+		.pipe(connect.reload());
+});
+
+gulp.task('less', function(){
+	gulp.src(paths.less)
+		.pipe(less({
+			paths: [ path.join(__dirname, 'less', 'includes') ]
+		}))
+		.pipe(gulp.dest(paths.styles))
 		.pipe(connect.reload());
 });
 
@@ -39,7 +52,8 @@ gulp.task('sass', function(done) {
 });
 
 gulp.task('watch', function() {
-	gulp.watch(paths.sass, ['sass']);
+//	gulp.watch(paths.sass, ['sass']);
+	gulp.watch(paths.less, ['less']);
 	gulp.watch(paths.jade, ['jade']);
 });
 

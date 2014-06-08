@@ -64,7 +64,7 @@ angular.module('mindlyApp', [
         controller: "HomeCtrl",
       },
     }, 
-  })  
+  })
 
   .state('menu.header.task-detail', {
     url: "/:task",
@@ -74,6 +74,41 @@ angular.module('mindlyApp', [
         controller: "TaskDetailCtrl",
       },
     }, 
+  })
+
+  .state('menu.header.projects', {
+      url: "/projects",
+      views: {
+        'content': {
+          templateUrl: "views/projects/projects.html",
+        },
+      }, 
+    })
+
+  // ROUTES FOR CREATING A NEW PROJECT
+  .state('menu.header.new-project', {
+    url: "/newProject",
+    views: {
+      'content': {
+        templateUrl: "views/projects/new-project.html",
+        controller: "CreateProjectCtrl",
+      },
+    }, 
+  })
+
+  .state('menu.header.new-project.step1', {
+    url: "/step1",
+    templateUrl: "views/projects/new-project-step1.html",
+  })
+
+  .state('menu.header.new-project.step2', {
+    url: "/step2",
+    templateUrl: "views/projects/new-project-step2.html",
+  })
+
+  .state('menu.header.new-project.step3', {
+    url: "/step3",
+    templateUrl: "views/projects/new-project-step3.html",
   })
 
   // if none of the above states are matched, use this as the fallback

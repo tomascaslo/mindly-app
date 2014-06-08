@@ -14,6 +14,7 @@ angular.module('mindlyApp')
 						priority: 1,
 						project: 'Cursos de JS',
 						project_id: 2,
+						imgUrl: '../img/ionic.png',
 					},
 					{
 						task_id: 2,
@@ -22,6 +23,7 @@ angular.module('mindlyApp')
 						priority: 2,
 						project: 'Alianza Real',
 						project_id: 1,
+						imgUrl: '../img/ionic.png',
 					},
 					{
 						task_id: 3,
@@ -30,6 +32,7 @@ angular.module('mindlyApp')
 						priority: 3,
 						project: 'Cursos de JS',
 						project_id: 2,
+						imgUrl: '../img/ionic.png',
 					},  
 				];
 			},

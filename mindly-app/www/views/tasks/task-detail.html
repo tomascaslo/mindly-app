@@ -1,6 +1,6 @@
 
 <div class="row">
-  <div class="col col-33"><img src="../img/ionic.png"/></div>
+  <div class="col col-33"><img ng-src="{{ task.imgUrl }}"/></div>
   <div class="col col-67">
     <h3>{{ task.name }}</h3>
     <h4>{{ task.project }}</h4>
@@ -14,9 +14,4 @@
     <h4>Description</h4>
     <p>{{ task.description }}</p>
   </div>
-</div>
-<div class="bar bar-footer bar-stable">
-  <div class="button button-clear">Pr. {{ task.priority }}</div>
-  <div class="title"></div>
-  <div class="button button-clear">{{ task.date }}</div>
 </div>

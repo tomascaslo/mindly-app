@@ -15,3 +15,9 @@ ion-side-menus
 				ion-item(nav-clear, menu-close, href="#") Partners
 				ion-item(nav-clear, menu-close, href="#") Profile
 				ion-item(nav-clear, menu-close, href="#") Settings
+
+div(ng-show="useTabBar()")
+	div(class="bar bar-footer bar-stable")
+		div(class="button button-clear", ng-bind-html="leftLabel()")
+		div(class="title", ng-bind-html="middleLabel()")
+		div(class="button button-clear", ng-bind-html="rightLabel()")

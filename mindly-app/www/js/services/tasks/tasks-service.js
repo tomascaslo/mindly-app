@@ -12,6 +12,7 @@ angular.module('mindlyApp')
 						project_id: 2,
 						status: 'finished',
 						date: '31/10/2014',
+						imgUrl: '../img/ionic.png',
 				};
 			},
 		};

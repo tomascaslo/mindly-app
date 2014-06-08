@@ -21,3 +21,10 @@
     </ion-content>
   </ion-side-menu>
 </ion-side-menus>
+<div ng-show="useTabBar()">
+  <div class="bar bar-footer bar-stable">
+    <div ng-bind-html="leftLabel()" class="button button-clear"></div>
+    <div ng-bind-html="middleLabel()" class="title"></div>
+    <div ng-bind-html="rightLabel()" class="button button-clear"></div>
+  </div>
+</div>

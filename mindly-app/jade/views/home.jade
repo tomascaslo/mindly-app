@@ -1,10 +1,10 @@
 div(ng-show="!tasks", class="full-page-msg") Agregar un nuevo proyecto 
-	//- a(href='/api/mindly/project/step1/')
-	i(class="icon ion-plus-circled")
+	a(ui-sref='menu.header.new-project.step1')
+		i(class="icon ion-plus-circled")
 div(ng-show="tasks") 
 	div(class="list")
 		a(ng-repeat="task in tasks", class="item item-avatar item-icon-right", href="#/menu/header/{{ task.task_id }}")
-			img(src="../img/ionic.png")
+			img(ng-src="{{ task.imgUrl }}")
 			h2 {{ task.name }}
 			p {{ task.description }}
 			h5 {{ task.project }} 

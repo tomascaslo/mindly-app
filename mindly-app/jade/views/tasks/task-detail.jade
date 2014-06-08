@@ -1,5 +1,5 @@
 div(class="row")
-	div(class="col col-33"): img(src="../img/ionic.png")
+	div(class="col col-33"): img(ng-src="{{ task.imgUrl }}")
 	div(class="col col-67") 
 		h3 {{ task.name }}
 		h4 {{ task.project }}
@@ -10,13 +10,7 @@ div(class="row")
 		h4 Description
 		p {{ task.description }}
 
-div(class="bar bar-footer bar-stable")
-	div(class="button button-clear") Pr. {{ task.priority }}
-	div(class="title")
-	div(class="button button-clear") {{ task.date }}
-
-//- Tabs without link
-	div(class="tabs")
-		div(class="tab-item") Pr. {{ task.priority }}
-		div(class="tab-item") 
-		div(class="tab-item") {{ task.date }}
+//- div(class="bar bar-footer bar-stable")
+//- 	div(class="button button-clear") Pr. {{ task.priority }}
+//- 	div(class="title")
+//- 	div(class="button button-clear") {{ task.date }}

@@ -1,0 +1,15 @@
+div(class="row row-center")
+	div(class="col")
+		div(class="list list-inset")
+			label(class="item item-input")
+				input(type="text", placeholder="Start Date", ng-model="projectData.startDate")
+			label(class="item item-input")
+				input(type="text", placeholder="End Date", ng-model="projectData.endDDate")
+
+			button(class="button button-block button-dark", ng-click="changeNumStages()") {{ projectData.numberOfStages }} Stages
+
+div(class="row row-bottom")
+	div(class="col")				
+		button(ui-sref="menu.header.new-project.step1", class="button button-block button-positive") Back
+	div(class="col")				
+		button(ui-sref="menu.header.new-project.step3", class="button button-block button-positive") Next

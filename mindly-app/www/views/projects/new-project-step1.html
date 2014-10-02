@@ -1,0 +1,27 @@
+
+<div class="row row-center">
+  <div class="col">
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" placeholder="Name" ng-model="projectData.name"/>
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Company" ng-model="projectData.company"/>
+      </label>
+      <label class="item item-input">
+        <textarea type="text" placeholder="Description" ng-model="projectData.description"></textarea>
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Image" ng-model="projectData.imageUrl"/>
+      </label>
+    </div>
+  </div>
+</div>
+<div class="row row-bottom">
+  <div class="col">				
+    <button class="button button-block button-positive">Cancel</button>
+  </div>
+  <div class="col">				
+    <button ui-sref="menu.header.new-project.step2" class="button button-block button-positive">Next</button>
+  </div>
+</div>

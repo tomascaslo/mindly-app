@@ -1,0 +1,9 @@
+
+<div ng-show="!tasks" class="full-page-msg">Agregar un nuevo proyecto <a ui-sref="menu.header.new-project.step1"><i class="icon ion-plus-circled"></i></a></div>
+<div ng-show="tasks">
+  <div class="list"><a ng-repeat="task in tasks" href="#/menu/header/{{ task.task_id }}" class="item item-avatar item-icon-right"><img ng-src="{{ task.imgUrl }}"/>
+      <h2>{{ task.name }}</h2>
+      <p>{{ task.description }}</p>
+      <h5>{{ task.project }} </h5>
+      <h5>Pr. {{ task.priority }} </h5><i class="icon ion-chevron-right icon-accessory"></i></a></div>
+</div>

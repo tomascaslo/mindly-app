@@ -1,0 +1,17 @@
+
+<div class="row">
+  <div class="col col-33"><img ng-src="{{ task.imgUrl }}"/></div>
+  <div class="col col-67">
+    <h3>{{ task.name }}</h3>
+    <h4>{{ task.project }}</h4>
+    <div class="row">
+      <div class="col col-67 col-offset-33">Status: {{ task.status }}</div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col col-37 col-offset-33">
+    <h4>Description</h4>
+    <p>{{ task.description }}</p>
+  </div>
+</div>

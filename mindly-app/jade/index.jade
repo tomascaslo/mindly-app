@@ -1,0 +1,39 @@
+doctype html
+html
+	head
+		meta(name="viewport", content="initial-scale=1, maximun-scale=1, user-scalable=no, width=device-width")
+
+		//- Ionic CSS
+		link(href="../lib/ionic/css/ionic.css", rel="stylesheet")
+		link(href="../css/styles.css", rel="stylesheet")
+
+	body(ng-app="mindlyApp")
+
+		ion-nav-view
+
+		//- Ionic JS
+		script(src="../lib/ionic/js/ionic.bundle.js")
+
+		//- Cordova JS !!! FALTA INCLUIRLO EN EL PATH !!!
+			script(src="cordova.js")
+
+		//- General
+		script(src="../lib/underscore/underscore.js")
+
+		//- MindlyApp
+		script(src="../js/app.js")
+
+		//- Services
+		script(src="../js/services/general/footer-service.js") 
+		script(src="../js/services/home-service.js")
+		script(src="../js/services/tasks/tasks-service.js")
+		script(src="../js/services/general/underscore-service.js")
+
+		//- Controllers
+		script(src="../js/controllers/general/menu-controller.js")
+		script(src="../js/controllers/general/header-controller.js")
+		script(src="../js/controllers/home-controller.js")
+		script(src="../js/controllers/tasks/task-detail-controller.js")
+		script(src="../js/controllers/projects/create-project-controller.js")
+
+		//- Directives

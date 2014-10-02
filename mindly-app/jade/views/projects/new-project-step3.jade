@@ -1,0 +1,36 @@
+div(class="list list-inset")
+	label(class="item item-input")
+		i(class="icon ion-search placeholder-icon")
+		input(type="text", placeholder="Search Partner")
+
+//- div(class="list", ng-repeat="partner in partners")
+//- 	div(class="item item-thumbnail-left item-icon-right")
+//- 		img(ng-src="{{ partner.image }}")
+//- 		h3 {{ partner.name }}
+//- 		a(class="button button-positive")
+//- 			i(class="icon ion-plus")
+
+div(class="list")
+	div(class="item item-thumbnail-left item-icon-right")
+		img(ng-src="../../../img/ionic.png")
+		h3 Your Mom
+		//- a(ng-click="toggleMember(1)", class="button button-positive")
+		i(ng-click="toggleMember(1)", class="icon", ng-class="{'ion-plus': true, 'ion-minus': false}")
+
+	div(class="item item-thumbnail-left item-icon-right")
+		img(ng-src="../../../img/ionic.png")
+		h3 Karla Gutierrez
+		//- a(ng-click="toggleMember(2)", class="button button-positive")
+		i(ng-click="toggleMember(2)", class="icon", ng-class="{'ion-plus': true, 'ion-minus': false}")
+
+	div(class="item item-thumbnail-left item-icon-right")
+		img(ng-src="../../../img/ionic.png")
+		h3 Brandon Meza
+		//- a(ng-click="toggleMember(3)", class="button button-positive")
+		i(ng-click="toggleMember(3)", class="icon", ng-class="{'ion-plus': true, 'ion-minus': false}")
+
+div(class="row row-bottom")
+	div(class="col")				
+		button(ui-sref="menu.header.new-project.step2", class="button button-block button-positive") Back
+	div(class="col")				
+		button(class="button button-block button-positive") Submit
